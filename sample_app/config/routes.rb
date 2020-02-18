@@ -4,4 +4,9 @@ Rails.application.routes.draw do
   get 'top' => 'homes#top'
 
   post 'todolists' => 'todolists#create'
+
+  get 'todolists/:id' => 'todolists#show', as: 'todolist'
+
+  get 'todolists' => 'todolists#index'
+
 end
